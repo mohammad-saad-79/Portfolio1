@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eid Mubarak Bestie 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1605311753781-7f634c46b0de?auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .eid-text {
+      font-size: 60px;
+      font-family: 'Great Vibes', cursive;
+      color: #fff;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ff0080;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff99cc, 0 0 15px #ff66cc;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #cc00ff;
+      }
+    }
+
+    .message {
+      font-size: 20px;
+      max-width: 600px;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeIn 3s ease forwards;
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .moon {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #fffacd, #f9d71c);
+      border-radius: 50%;
+      box-shadow: 0 0 30px #fffacd;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .star {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 3s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.2; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="moon"></div>
+  <div class="container">
+    <div class="eid-text">Eid Mubarak Sadaf! 🌙✨</div>
+    <div class="message">
+      May this Eid bring lots of joy, peace, and laughter to your heart. 💓<br />
+      You’re not just a friend—you’re a blessing in my life. 🌸<br />
+      you always made me feel special and always supported me even when i felt like i was worthless. 🥀<br/>
+      I know that i am a very stupid person and i say anything and you know, so forget about these stupid things. 🥹<br/>
+      Let’s make more beautiful memories together like our carriers, goals and approach all that things what we want first. 💖
+    </div>
+  </div>
+
+  <script>
+    // Create random stars
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      star.style.top = Math.random() * 100 + "vh";
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.animationDuration = (Math.random() * 2 + 2) + "s";
+      document.body.appendChild(star);
+    }
+  </script>
+</body>
+</html>
